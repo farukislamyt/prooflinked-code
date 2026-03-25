@@ -1,46 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Proof-Linked Code™</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="style.css">
-
-  <!-- QR libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
-  <script src="https://unpkg.com/html5-qrcode"></script>
+  <title>GlyphCode™</title>
 </head>
-
 <body>
 
-<h1>🔐 Proof-Linked Code™</h1>
+<h2>GlyphCode Generator</h2>
 
-<div class="tabs">
-  <button onclick="showTab('encode')">Encode</button>
-  <button onclick="showTab('scan')">Scan</button>
-</div>
+<input id="data" placeholder="Enter data">
+<button onclick="generate()">Generate</button>
 
-<!-- ENCODE -->
-<div id="encode" class="tab active">
-  <h2>Encode Data</h2>
-  <textarea id="data" placeholder="Enter your data"></textarea>
-  <button onclick="encode()">Generate Code</button>
-
-  <canvas id="qr"></canvas>
-  <pre id="token"></pre>
-</div>
-
-<!-- SCAN -->
-<div id="scan" class="tab">
-  <h2>Scan & Verify</h2>
-  <div id="reader"></div>
-  <button onclick="startScanner()">Start Scanner</button>
-
-  <pre id="result"></pre>
-</div>
+<canvas id="canvas" width="300" height="300"></canvas>
 
 <script src="app.js"></script>
-
 </body>
 </html>
